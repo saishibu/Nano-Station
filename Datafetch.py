@@ -19,7 +19,7 @@ r=opener.open('http://192.168.1.20/login.cgi',login_data)
 while(1):
 	status_page=opener.open('http://192.168.1.20/status.cgi')
 	status=status_page.read()
-	#print (status)
+	print (status)
 	json_status=json.loads(status)
 	signal=json_status['wireless']['signal']
 	print str(signal) + 'db'
