@@ -22,7 +22,7 @@ while(1):
 	noise=json_status['wireless']['noise']
 	print str(signal) + 'db'
 	print str(noise) + 'db'
-	data={'signal_strength':signal,'noise_floor':noise:'ch_master_position':pos}
+	data={'signal_strength':signal,'noise_floor':noise,'ch_master_position':pos}
 	todb(data)
 	time.sleep(5)
 	
