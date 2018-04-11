@@ -6,8 +6,8 @@ import ImageDraw
 import ImageFont
 
 
-RST =22
-DC=5
+RST=18
+DC=15
 SPI_PORT=0
 SPI_DEVICE=0
 

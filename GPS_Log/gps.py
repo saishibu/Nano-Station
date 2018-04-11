@@ -1,12 +1,12 @@
 import serial,pynmea2,time,pymysql
 
-port = serial.Serial("/dev/ttyUSB1", baudrate=9600)
+port = serial.Serial("/dev/ttyUSB0", baudrate=9600)
 conn=pymysql.connect(database="OceanNet",user="on",password="amma",host="localhost")
 cur=conn.cursor()
 a=1
 while a:
 	rcv = port.readline()
-#	print rcv[0:6]
+	print rcv[0:6]
 	if rcv[0:6] == '$GPGGA':
 		msg=pynmea2.parse(rcv)
 		lat=msg.lat
